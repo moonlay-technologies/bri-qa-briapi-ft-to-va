@@ -1,0 +1,21 @@
+{
+  "keywordFileContentHash": "12939A96F812BDC1A4A2B6ADE6B8C04C",
+  "keywordClasses": [
+    {
+      "name": "utils.Generate",
+      "keywordMethods": [
+        {
+          "name": "randomize",
+          "parameters": [],
+          "javadoc": ""
+        },
+        {
+          "name": "signSHA256RSA",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

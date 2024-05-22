@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>InquiryIntrabank</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f90ce020-8a8c-4d95-bd35-38876d5419ab</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0c6f6ebd-9a2c-40ec-a56f-e3a34bd2b3db</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ae5597eb-a558-45b3-91fb-14bba4bf334d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>61a3755f-a6ab-4e7e-ad79-72e9e7cde3c5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0c6f6ebd-9a2c-40ec-a56f-e3a34bd2b3db</id>
+      <masked>false</masked>
+      <name>partnerServiceId</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ae5597eb-a558-45b3-91fb-14bba4bf334d</id>
+      <masked>false</masked>
+      <name>customerNo</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>61a3755f-a6ab-4e7e-ad79-72e9e7cde3c5</id>
+      <masked>false</masked>
+      <name>virtualAccountNo</name>
+   </variable>
+</TestCaseEntity>

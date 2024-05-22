@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="FTtoVAPaymentIntrabank" time="11.665" tests="2" failures="0" errors="1">
+   <testsuite name="FTtoVAPaymentIntrabank" tests="2" failures="0" errors="1" time="11.665" skipped="0" timestamp="2023-12-11 09:36:26" hostname="VinnyKristinaSihombi - Vinny-Moonlay-LP06955" id="Test Suites/FTtoVAPaymentIntrabank">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\1. QA\\BRI\\API\\Briapi\\qa-briapi-ft-to-va\\Reports\\20231211_093607\\FTtoVAPaymentIntrabank\\20231211_093607"/>
+         <property name="logFiles" value="D:\\1. QA\\BRI\\API\\Briapi\\qa-briapi-ft-to-va\\Reports\\20231211_093607\\FTtoVAPaymentIntrabank\\20231211_093607\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="VinnyKristinaSihombi - Vinny-Moonlay-LP06955"/>
+         <property name="hostAddress" value="192.168.28.65"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.6.0.208"/>
+      </properties>
+      <testcase name="Test Cases/Get Token/Get Token" time="9.202" classname="Test Cases/Get Token/Get Token" status="PASSED">
+         <system-out><![CDATA[2023-12-11 09:36:26 - [TEST_CASE][PASSED] - Test Cases/Get Token/Get Token: Test Cases/Get Token/Get Token
+
+2023-12-11 09:36:27 - [TEST_STEP][PASSED] - "Get Token Process": null
+
+2023-12-11 09:36:27 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-12-11 09:36:27 - [TEST_STEP][PASSED] - comment("ini tanggal" + timeStamp): ini tanggal2023-12-11T09:36:27.810+07:00
+
+2023-12-11 09:36:28 - [MESSAGE][INFO] - ini tanggal2023-12-11T09:36:27.810+07:00
+
+2023-12-11 09:36:28 - [TEST_STEP][PASSED] - timeStamp = timeStamp: null
+
+2023-12-11 09:36:29 - [TEST_STEP][PASSED] - signatureHex = utils.Generate.signSHA256RSA(): utils.Generate.signSHA256RSA is PASSED
+
+2023-12-11 09:36:32 - [MESSAGE][PASSED] - utils.Generate.signSHA256RSA is PASSED
+
+2023-12-11 09:36:32 - [TEST_STEP][PASSED] - comment("signatureHEX" + signatureHex): signatureHEXejCxeiGERJ5jvvI7jZ3BSGKiOZji0T6w5evnakdq3gEp5YM4lp57K42MQjNhnRFTgZnfrBYbktRe+dOU9Bg1GwQevM6vHChEHIDZSiFFmbcDh+DJ89Ou8XPXOfHEOT+sJkpW8+B6Iqu3eemSHikuFMozmxASclP+G74yDzgKeo0jn4APLs1kBDqnX0cvALQWNoEwaCXJ765YyI4g3ZhExFU+FqBFqZXhEI+DuQU0p08g4j67d5cYSN4X9aAnEWupU2F2NTFhgBhsxvhwIBzqWnsiUs2PEoTHxG8qRFsVvOKYNwtBhpkb7Za78/EyhwCmcloHwS3v5wi5RXEyXgaIaQ==
+
+2023-12-11 09:36:32 - [MESSAGE][INFO] - signatureHEXejCxeiGERJ5jvvI7jZ3BSGKiOZji0T6w5evnakdq3gEp5YM4lp57K42MQjNhnRFTgZnfrBYbktRe+dOU9Bg1GwQevM6vHChEHIDZSiFFmbcDh+DJ89Ou8XPXOfHEOT+sJkpW8+B6Iqu3eemSHikuFMozmxASclP+G74yDzgKeo0jn4APLs1kBDqnX0cvALQWNoEwaCXJ765YyI4g3ZhExFU+FqBFqZXhEI+DuQU0p08g4j67d5cYSN4X9aAnEWupU2F2NTFhgBhsxvhwIBzqWnsiUs2PEoTHxG8qRFsVvOKYNwtBhpkb7Za78/EyhwCmcloHwS3v5wi5RXEyXgaIaQ==
+
+2023-12-11 09:36:32 - [TEST_STEP][PASSED] - getToken = findTestObject("Object Repository/Get Token/getToken", ["signatureHex":signatureHex, "clientID":clientId, "timeStamp":timeStamp]): null
+
+2023-12-11 09:36:32 - [TEST_STEP][PASSED] - request_body = getToken.getHttpBody(): null
+
+2023-12-11 09:36:32 - [TEST_STEP][PASSED] - comment("request body " + request_body): request body {
+    "grantType": "client_credentials"
+}
+
+2023-12-11 09:36:32 - [MESSAGE][INFO] - request body {
+    "grantType": "client_credentials"
+}
+
+2023-12-11 09:36:32 - [TEST_STEP][PASSED] - response = sendRequest(getToken): Send request successfully
+
+2023-12-11 09:36:35 - [MESSAGE][INFO] - HAR: D:\1. QA\BRI\API\Briapi\qa-briapi-ft-to-va\Reports\20231211_093607\FTtoVAPaymentIntrabank\20231211_093607\requests\main\0.har
+
+2023-12-11 09:36:35 - [MESSAGE][PASSED] - Send request successfully
+
+2023-12-11 09:36:35 - [TEST_STEP][PASSED] - comment("response body " + response.getResponseText()): response body 
+                {
+                    
+                    "responseCode": "4017300",
+                    "responseMessage": "Unauthorized. stringToSign"
+                    
+                }
+            
+
+2023-12-11 09:36:35 - [MESSAGE][INFO] - response body 
+                {
+                    
+                    "responseCode": "4017300",
+                    "responseMessage": "Unauthorized. stringToSign"
+                    
+                }
+            
+
+2023-12-11 09:36:35 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2023-12-11 09:36:35 - [TEST_STEP][PASSED] - parsedJson = slurper.parseText(response.getResponseText()): null
+
+2023-12-11 09:36:35 - [TEST_STEP][PASSED] - Token = accessToken: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/FT to VA/PaymentIntrabank" time="1.514" classname="Test Cases/FT to VA/PaymentIntrabank" status="ERROR">
+         <error type="ERROR" message="Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)
+"/>
+         <system-out><![CDATA[2023-12-11 09:36:36 - [TEST_CASE][ERROR] - Test Cases/FT to VA/PaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)
+
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - "Intrabank Account": null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - externalId = 10000 + Random().nextInt(99999 - 10000): null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - comment("Random 5-digit integer: " + externalId): Random 5-digit integer: 13693
+
+2023-12-11 09:36:37 - [MESSAGE][INFO] - Random 5-digit integer: 13693
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - trxDateTime = format("yyyy-MM-dd'T'HH:mm:ssZ").replace("0700", "07:00"): null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - comment("ini transactionDate " + trxDateTime): ini transactionDate 2023-12-11T09:36:37+07:00
+
+2023-12-11 09:36:37 - [MESSAGE][INFO] - ini transactionDate 2023-12-11T09:36:37+07:00
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - PaymentIntrabank2 = findTestObject("Object Repository/FT to VA/Payment Intrabank", ["externalId":externalId, "signature":"", "timeStamp":timeStamp, "token":Token, "partnerServiceId":partnerServiceId, "customerNo":customerNo, ... ]): null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - request_body2 = PaymentIntrabank2.getHttpBody(): null
+
+2023-12-11 09:36:37 - [TEST_STEP][PASSED] - endpoint_path = "/payment/snap/prod/v1.1/transfer-va/payment-intrabank": null
+
+2023-12-11 09:36:37 - [TEST_STEP][ERROR] - signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp): Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+com.kms.katalon.core.exception.StepErrorException: java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.throwError(CustomKeywordDelegatingMetaClass.java:101)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:73)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)
+Caused by: java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	... 14 more
+
+
+2023-12-11 09:36:37 - [MESSAGE][ERROR] - Cannot invoke method getBytes() on null object
+
+2023-12-11 09:36:37 - [MESSAGE][ERROR] - Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+com.kms.katalon.core.exception.StepErrorException: java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.throwError(CustomKeywordDelegatingMetaClass.java:101)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:73)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)
+Caused by: java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	... 14 more]]></system-out>
+         <system-err><![CDATA[2023-12-11 09:36:36 - [TEST_CASE][ERROR] - Test Cases/FT to VA/PaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-12-11 09:36:26 - [TEST_SUITE][ERROR] - FTtoVAPaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)]]></system-out>
+      <system-err><![CDATA[2023-12-11 09:36:26 - [TEST_SUITE][ERROR] - FTtoVAPaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank FAILED.
+Reason:
+java.lang.NullPointerException: Cannot invoke method getBytes() on null object
+	at utils.Generate.signature(generate.groovy:121)
+	at utils.Generate.invokeMethod(generate.groovy)
+	at com.kms.katalon.core.main.CustomKeywordDelegatingMetaClass.invokeStaticMethod(CustomKeywordDelegatingMetaClass.java:55)
+	at PaymentIntrabank.run(PaymentIntrabank:61)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1702262167305.run(TempTestSuite1702262167305.groovy:36)]]></system-err>
+   </testsuite>
+</testsuites>

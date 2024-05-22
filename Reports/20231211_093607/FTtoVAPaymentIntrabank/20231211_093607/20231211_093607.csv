@@ -1,0 +1,30 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+FTtoVAPaymentIntrabank,,,,2023-12-11 09:36:26,2023-12-11 09:36:37,11.665s,ERROR
+,,,,,,,
+Test Cases/Get Token/Get Token,,,,2023-12-11 09:36:26,2023-12-11 09:36:35,9.202s,PASSED
+"""Get Token Process""",,,,2023-12-11 09:36:27,2023-12-11 09:36:27,0.006s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate Time Stamp,,2023-12-11 09:36:27,2023-12-11 09:36:27,0.035s,PASSED
+"comment(""ini tanggal"" + timeStamp)",,,,2023-12-11 09:36:27,2023-12-11 09:36:28,0.427s,PASSED
+timeStamp = timeStamp,,,,2023-12-11 09:36:28,2023-12-11 09:36:29,1.290s,PASSED
+signatureHex = utils.Generate.signSHA256RSA(),,Generate SignatureHex,,2023-12-11 09:36:29,2023-12-11 09:36:32,2.578s,PASSED
+"comment(""signatureHEX"" + signatureHex)",,,,2023-12-11 09:36:32,2023-12-11 09:36:32,0.012s,PASSED
+"getToken = findTestObject(""Object Repository/Get Token/getToken"", [""signatureHex"":signatureHex, ""clientID"":clientId, ""timeStamp"":timeStamp])",,,,2023-12-11 09:36:32,2023-12-11 09:36:32,0.357s,PASSED
+request_body = getToken.getHttpBody(),,Get Body request,,2023-12-11 09:36:32,2023-12-11 09:36:32,0.049s,PASSED
+"comment(""request body "" + request_body)",,,,2023-12-11 09:36:32,2023-12-11 09:36:32,0.015s,PASSED
+response = sendRequest(getToken),,Get Respon Body,,2023-12-11 09:36:32,2023-12-11 09:36:35,3.239s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-12-11 09:36:35,2023-12-11 09:36:35,0.055s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-12-11 09:36:35,2023-12-11 09:36:35,0.056s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-12-11 09:36:35,2023-12-11 09:36:35,0.030s,PASSED
+Token = accessToken,,,,2023-12-11 09:36:35,2023-12-11 09:36:35,0.023s,PASSED
+,,,,,,,
+Test Cases/FT to VA/PaymentIntrabank,,,,2023-12-11 09:36:36,2023-12-11 09:36:37,1.514s,ERROR
+"""Intrabank Account""",,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.003s,PASSED
+externalId = 10000 + Random().nextInt(99999 - 10000),,Generate External Id,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.017s,PASSED
+"comment(""Random 5-digit integer: "" + externalId)",,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.008s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate TimeStamp,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.002s,PASSED
+"trxDateTime = format(""yyyy-MM-dd'T'HH:mm:ssZ"").replace(""0700"", ""07:00"")",,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.001s,PASSED
+"comment(""ini transactionDate "" + trxDateTime)",,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.004s,PASSED
+"PaymentIntrabank2 = findTestObject(""Object Repository/FT to VA/Payment Intrabank"", [""externalId"":externalId, ""signature"":"""", ""timeStamp"":timeStamp, ""token"":Token, ""partnerServiceId"":partnerServiceId, ""customerNo"":customerNo, ... ])",,Proses Encrypt Request Body,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.264s,PASSED
+request_body2 = PaymentIntrabank2.getHttpBody(),,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.001s,PASSED
+"endpoint_path = ""/payment/snap/prod/v1.1/transfer-va/payment-intrabank""",,,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.001s,PASSED
+"signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp)",,Generate Signature,,2023-12-11 09:36:37,2023-12-11 09:36:37,0.227s,ERROR

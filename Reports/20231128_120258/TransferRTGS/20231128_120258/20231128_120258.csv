@@ -1,0 +1,34 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TransferRTGS,,,,2023-11-28 12:04:19,2023-11-28 12:04:27,8.605s,PASSED
+,,,,,,,
+Test Cases/Get Token/Get Token,,,,2023-11-28 12:04:19,2023-11-28 12:04:26,6.235s,PASSED
+"""Get Token Process""",,,,2023-11-28 12:04:20,2023-11-28 12:04:20,0.003s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate Time Stamp,,2023-11-28 12:04:20,2023-11-28 12:04:20,0.018s,PASSED
+"comment(""ini tanggal"" + timeStamp)",,,,2023-11-28 12:04:20,2023-11-28 12:04:20,0.159s,PASSED
+timeStamp = timeStamp,,,,2023-11-28 12:04:20,2023-11-28 12:04:21,0.415s,PASSED
+signatureHex = utils.Generate.signSHA256RSA(),,Generate SignatureHex,,2023-11-28 12:04:21,2023-11-28 12:04:22,1.873s,PASSED
+"comment(""signatureHEX"" + signatureHex)",,,,2023-11-28 12:04:22,2023-11-28 12:04:22,0.010s,PASSED
+"getToken = findTestObject(""Object Repository/Get Token/getToken"", [""signatureHex"":signatureHex, ""clientID"":clientId, ""timeStamp"":timeStamp])",,,,2023-11-28 12:04:22,2023-11-28 12:04:23,0.295s,PASSED
+request_body = getToken.getHttpBody(),,Get Body request,,2023-11-28 12:04:23,2023-11-28 12:04:23,0.041s,PASSED
+"comment(""request body "" + request_body)",,,,2023-11-28 12:04:23,2023-11-28 12:04:23,0.008s,PASSED
+response = sendRequest(getToken),,Get Respon Body,,2023-11-28 12:04:23,2023-11-28 12:04:25,2.677s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-11-28 12:04:25,2023-11-28 12:04:25,0.040s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-11-28 12:04:25,2023-11-28 12:04:26,0.018s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-11-28 12:04:26,2023-11-28 12:04:26,0.020s,PASSED
+Token = accessToken,,,,2023-11-28 12:04:26,2023-11-28 12:04:26,0.020s,PASSED
+,,,,,,,
+Test Cases/Transfer RTGS/TransferRTGS,,,,2023-11-28 12:04:26,2023-11-28 12:04:27,1.303s,PASSED
+externalId = 10000 + Random().nextInt(99999 - 10000),,Interbank Account,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.011s,PASSED
+"comment(""Random 5-digit integer: "" + externalId)",,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.010s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate TimeStamp,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.003s,PASSED
+"TransferRTGS2 = findTestObject(""Object Repository/Transfer RTGS/TransferRTGS"", [""externalId"":externalId, ""signature"":"""", ""timeStamp"":timeStamp, ""token"":Token, ""partnerReferenceNo"":partnerReferenceNo, ""value"":value, ... ])",,Proses Encrypt Request Body,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.160s,PASSED
+request_body2 = TransferRTGS2.getHttpBody(),,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.001s,PASSED
+"endpoint_path = ""/snap/v1.0/transfer-rtgs""",,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.003s,PASSED
+"signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp)",,Generate Signature,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.089s,PASSED
+"TransferRTGS = findTestObject(""Object Repository/Transfer RTGS/TransferRTGS"", [""externalId"":externalId, ""signature"":signature, ""timeStamp"":timeStamp, ""token"":Token, ""partnerReferenceNo"":partnerReferenceNo, ... ])",,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.141s,PASSED
+request_body = TransferRTGS.getHttpBody(),,Get Body request,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.001s,PASSED
+"comment(""request body "" + request_body)",,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.005s,PASSED
+response = sendRequest(TransferRTGS),,Get Respon Body,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.282s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.008s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.003s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-11-28 12:04:27,2023-11-28 12:04:27,0.003s,PASSED

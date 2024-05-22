@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TransferRTGS" time="8.605" tests="2" failures="0" errors="0">
+   <testsuite name="TransferRTGS" tests="2" failures="0" errors="0" time="8.605" skipped="0" timestamp="2023-11-28 12:04:19" hostname="VinnyKristinaSihombi - Vinny-Moonlay-LP06955" id="Test Suites/TransferRTGS">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\1. QA\\BRI\\Briapi\\qa-briapi-all-api\\Reports\\20231128_120258\\TransferRTGS\\20231128_120258"/>
+         <property name="logFiles" value="D:\\1. QA\\BRI\\Briapi\\qa-briapi-all-api\\Reports\\20231128_120258\\TransferRTGS\\20231128_120258\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="VinnyKristinaSihombi - Vinny-Moonlay-LP06955"/>
+         <property name="hostAddress" value="192.168.54.65"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.6.0.208"/>
+      </properties>
+      <testcase name="Test Cases/Get Token/Get Token" time="6.235" classname="Test Cases/Get Token/Get Token" status="PASSED">
+         <system-out><![CDATA[2023-11-28 12:04:19 - [TEST_CASE][PASSED] - Test Cases/Get Token/Get Token: Test Cases/Get Token/Get Token
+
+2023-11-28 12:04:20 - [TEST_STEP][PASSED] - "Get Token Process": null
+
+2023-11-28 12:04:20 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-11-28 12:04:20 - [TEST_STEP][PASSED] - comment("ini tanggal" + timeStamp): ini tanggal2023-11-28T12:04:20.455+07:00
+
+2023-11-28 12:04:20 - [MESSAGE][INFO] - ini tanggal2023-11-28T12:04:20.455+07:00
+
+2023-11-28 12:04:20 - [TEST_STEP][PASSED] - timeStamp = timeStamp: null
+
+2023-11-28 12:04:21 - [TEST_STEP][PASSED] - signatureHex = utils.Generate.signSHA256RSA(): utils.Generate.signSHA256RSA is PASSED
+
+2023-11-28 12:04:22 - [MESSAGE][PASSED] - utils.Generate.signSHA256RSA is PASSED
+
+2023-11-28 12:04:22 - [TEST_STEP][PASSED] - comment("signatureHEX" + signatureHex): signatureHEXKCjx1cmcYyI6OqpenMBGfrPraVMS3+ozPIIVvu+BiFHOT1aEFLKg4IrlStn4AvXTkwUd0Fw/0eN/kps87vK0ilnfzFTGnZHuU73sxaScjWlg3sryHqW9YUzeTSTnSaRaKIrDHJI6A9D7QmnbDjuvyeYDkvDAe8VRpjlr3qZHuU71fnYXojNzPI6ITyex/EB5Kq0jDF+MbhJ5YR2abKmpFD5oaTMPj/FkscYBNhC8Q30eKmYdZQxllFtQyR8Q3cZPcIkBALgkbyJPruJKIVxry6aFMM21i2uHoYnqEk33hdc+8lgTH8IFUGEeKZkzmfR1pkDdScO1WJJYiUNdiNkezw==
+
+2023-11-28 12:04:22 - [MESSAGE][INFO] - signatureHEXKCjx1cmcYyI6OqpenMBGfrPraVMS3+ozPIIVvu+BiFHOT1aEFLKg4IrlStn4AvXTkwUd0Fw/0eN/kps87vK0ilnfzFTGnZHuU73sxaScjWlg3sryHqW9YUzeTSTnSaRaKIrDHJI6A9D7QmnbDjuvyeYDkvDAe8VRpjlr3qZHuU71fnYXojNzPI6ITyex/EB5Kq0jDF+MbhJ5YR2abKmpFD5oaTMPj/FkscYBNhC8Q30eKmYdZQxllFtQyR8Q3cZPcIkBALgkbyJPruJKIVxry6aFMM21i2uHoYnqEk33hdc+8lgTH8IFUGEeKZkzmfR1pkDdScO1WJJYiUNdiNkezw==
+
+2023-11-28 12:04:22 - [TEST_STEP][PASSED] - getToken = findTestObject("Object Repository/Get Token/getToken", ["signatureHex":signatureHex, "clientID":clientId, "timeStamp":timeStamp]): null
+
+2023-11-28 12:04:23 - [TEST_STEP][PASSED] - request_body = getToken.getHttpBody(): null
+
+2023-11-28 12:04:23 - [TEST_STEP][PASSED] - comment("request body " + request_body): request body {
+    "grantType": "client_credentials"
+}
+
+2023-11-28 12:04:23 - [MESSAGE][INFO] - request body {
+    "grantType": "client_credentials"
+}
+
+2023-11-28 12:04:23 - [TEST_STEP][PASSED] - response = sendRequest(getToken): Send request successfully
+
+2023-11-28 12:04:25 - [MESSAGE][INFO] - HAR: D:\1. QA\BRI\Briapi\qa-briapi-all-api\Reports\20231128_120258\TransferRTGS\20231128_120258\requests\main\0.har
+
+2023-11-28 12:04:25 - [MESSAGE][PASSED] - Send request successfully
+
+2023-11-28 12:04:25 - [TEST_STEP][PASSED] - comment("response body " + response.getResponseText()): response body 
+        {
+        "accessToken": "",
+        "tokenType": "",
+        "expiresIn": ""
+        }
+
+    
+
+2023-11-28 12:04:25 - [MESSAGE][INFO] - response body 
+        {
+        "accessToken": "",
+        "tokenType": "",
+        "expiresIn": ""
+        }
+
+    
+
+2023-11-28 12:04:25 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2023-11-28 12:04:26 - [TEST_STEP][PASSED] - parsedJson = slurper.parseText(response.getResponseText()): null
+
+2023-11-28 12:04:26 - [TEST_STEP][PASSED] - Token = accessToken: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Transfer RTGS/TransferRTGS" time="1.303" classname="Test Cases/Transfer RTGS/TransferRTGS" status="PASSED">
+         <system-out><![CDATA[2023-11-28 12:04:26 - [TEST_CASE][PASSED] - Test Cases/Transfer RTGS/TransferRTGS: Test Cases/Transfer RTGS/TransferRTGS
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - externalId = 10000 + Random().nextInt(99999 - 10000): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - comment("Random 5-digit integer: " + externalId): Random 5-digit integer: 99388
+
+2023-11-28 12:04:27 - [MESSAGE][INFO] - Random 5-digit integer: 99388
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - TransferRTGS2 = findTestObject("Object Repository/Transfer RTGS/TransferRTGS", ["externalId":externalId, "signature":"", "timeStamp":timeStamp, "token":Token, "partnerReferenceNo":partnerReferenceNo, "value":value, ... ]): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - request_body2 = TransferRTGS2.getHttpBody(): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - endpoint_path = "/snap/v1.0/transfer-rtgs": null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp): utils.Generate.signature is PASSED
+
+2023-11-28 12:04:27 - [MESSAGE][PASSED] - utils.Generate.signature is PASSED
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - TransferRTGS = findTestObject("Object Repository/Transfer RTGS/TransferRTGS", ["externalId":externalId, "signature":signature, "timeStamp":timeStamp, "token":Token, "partnerReferenceNo":partnerReferenceNo, ... ]): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - request_body = TransferRTGS.getHttpBody(): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - comment("request body " + request_body): request body {
+    "partnerReferenceNo": "2023020300001",
+    "amount": {
+        "value": "101000000.00",
+        "currency": "IDR"
+    },
+    "beneficiaryAccountName": "Rine",
+    "beneficiaryAccountNo": "9000018304494",
+    "beneficiaryAddress": "Bogor",
+    "beneficiaryBankCode": "BMRIIDJA",
+    "beneficiaryBankName": "MANDIRI",
+    "beneficiaryCustomerResidence": "1",
+    "beneficiaryCustomerType": "1",
+    "customerReference": "1005208876",
+    "feeType": "OUR",
+    "kodepos": "12250",
+    "receiverPhone": "091234567890",
+    "remark": "remark test",
+    "senderCustomerResidence": "1",
+    "senderCustomerType": "1",
+    "senderPhone": "080901020304",
+    "sourceAccountNo": "020601009446306",
+    "transactionDate": "2023-02-03T00:46:00-07:00",
+    "additionalInfo": {
+        "deviceId": "12345679237",
+        "channel": "mobilephone",
+        "senderName": "Latifah Hanum",
+        "senderIdentity": "315205100190093",
+        "senderAddress": "Jakarta Selatan",
+        "corporateType": "1"
+    }
+}
+
+2023-11-28 12:04:27 - [MESSAGE][INFO] - request body {
+    "partnerReferenceNo": "2023020300001",
+    "amount": {
+        "value": "101000000.00",
+        "currency": "IDR"
+    },
+    "beneficiaryAccountName": "Rine",
+    "beneficiaryAccountNo": "9000018304494",
+    "beneficiaryAddress": "Bogor",
+    "beneficiaryBankCode": "BMRIIDJA",
+    "beneficiaryBankName": "MANDIRI",
+    "beneficiaryCustomerResidence": "1",
+    "beneficiaryCustomerType": "1",
+    "customerReference": "1005208876",
+    "feeType": "OUR",
+    "kodepos": "12250",
+    "receiverPhone": "091234567890",
+    "remark": "remark test",
+    "senderCustomerResidence": "1",
+    "senderCustomerType": "1",
+    "senderPhone": "080901020304",
+    "sourceAccountNo": "020601009446306",
+    "transactionDate": "2023-02-03T00:46:00-07:00",
+    "additionalInfo": {
+        "deviceId": "12345679237",
+        "channel": "mobilephone",
+        "senderName": "Latifah Hanum",
+        "senderIdentity": "315205100190093",
+        "senderAddress": "Jakarta Selatan",
+        "corporateType": "1"
+    }
+}
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - response = sendRequest(TransferRTGS): Send request successfully
+
+2023-11-28 12:04:27 - [MESSAGE][INFO] - HAR: D:\1. QA\BRI\Briapi\qa-briapi-all-api\Reports\20231128_120258\TransferRTGS\20231128_120258\requests\main\1.har
+
+2023-11-28 12:04:27 - [MESSAGE][PASSED] - Send request successfully
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - comment("response body " + response.getResponseText()): response body {"responseCode":"2002200","responseMessage":"Successful","referenceNo":"4393571713541520693066","partnerReferenceNo":"2023020300001","amount":{"value":"101000000.00","currency":"IDR"},"beneficiaryAccountName":"Rine","beneficiaryAccountNo":"9000018304494","beneficiaryBankCode":"BMRIIDJA","customerReference":"1005208876","sourceAccountNo":"020601009446306","transactionDate":"2023-02-03T00:46:00-07:00","transactionStatus":"06","transactionStatusDesc":"Failed","additionalInfo":{"deviceId":"12345679237","channel":"mobilephone","senderName":"Latifah Hanum","senderIdentity":"315205100190093","senderAddress":"Jakarta Selatan","corporateType":"1"}}
+
+2023-11-28 12:04:27 - [MESSAGE][INFO] - response body {"responseCode":"2002200","responseMessage":"Successful","referenceNo":"4393571713541520693066","partnerReferenceNo":"2023020300001","amount":{"value":"101000000.00","currency":"IDR"},"beneficiaryAccountName":"Rine","beneficiaryAccountNo":"9000018304494","beneficiaryBankCode":"BMRIIDJA","customerReference":"1005208876","sourceAccountNo":"020601009446306","transactionDate":"2023-02-03T00:46:00-07:00","transactionStatus":"06","transactionStatusDesc":"Failed","additionalInfo":{"deviceId":"12345679237","channel":"mobilephone","senderName":"Latifah Hanum","senderIdentity":"315205100190093","senderAddress":"Jakarta Selatan","corporateType":"1"}}
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2023-11-28 12:04:27 - [TEST_STEP][PASSED] - parsedJson = slurper.parseText(response.getResponseText()): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-11-28 12:04:19 - [TEST_SUITE][PASSED] - TransferRTGS: Test Cases/Transfer RTGS/TransferRTGS]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

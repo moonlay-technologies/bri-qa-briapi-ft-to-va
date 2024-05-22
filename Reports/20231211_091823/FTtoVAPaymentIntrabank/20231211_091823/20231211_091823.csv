@@ -1,0 +1,37 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+FTtoVAPaymentIntrabank,,,,2023-12-11 09:18:41,2023-12-11 09:19:10,29.465s,PASSED
+,,,,,,,
+Test Cases/Get Token/Get Token,,,,2023-12-11 09:18:42,2023-12-11 09:18:50,8.928s,PASSED
+"""Get Token Process""",,,,2023-12-11 09:18:42,2023-12-11 09:18:42,0.003s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate Time Stamp,,2023-12-11 09:18:42,2023-12-11 09:18:42,0.020s,PASSED
+"comment(""ini tanggal"" + timeStamp)",,,,2023-12-11 09:18:42,2023-12-11 09:18:42,0.155s,PASSED
+timeStamp = timeStamp,,,,2023-12-11 09:18:42,2023-12-11 09:18:43,0.491s,PASSED
+signatureHex = utils.Generate.signSHA256RSA(),,Generate SignatureHex,,2023-12-11 09:18:43,2023-12-11 09:18:46,3.104s,PASSED
+"comment(""signatureHEX"" + signatureHex)",,,,2023-12-11 09:18:46,2023-12-11 09:18:46,0.010s,PASSED
+"getToken = findTestObject(""Object Repository/Get Token/getToken"", [""signatureHex"":signatureHex, ""clientID"":clientId, ""timeStamp"":timeStamp])",,,,2023-12-11 09:18:46,2023-12-11 09:18:47,0.473s,PASSED
+request_body = getToken.getHttpBody(),,Get Body request,,2023-12-11 09:18:47,2023-12-11 09:18:47,0.064s,PASSED
+"comment(""request body "" + request_body)",,,,2023-12-11 09:18:47,2023-12-11 09:18:47,0.011s,PASSED
+response = sendRequest(getToken),,Get Respon Body,,2023-12-11 09:18:47,2023-12-11 09:18:50,3.679s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-12-11 09:18:50,2023-12-11 09:18:50,0.064s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-12-11 09:18:50,2023-12-11 09:18:50,0.032s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-12-11 09:18:50,2023-12-11 09:18:50,0.031s,PASSED
+Token = accessToken,,,,2023-12-11 09:18:50,2023-12-11 09:18:50,0.023s,PASSED
+,,,,,,,
+Test Cases/FT to VA/PaymentIntrabank,,,,2023-12-11 09:18:51,2023-12-11 09:19:10,19.552s,PASSED
+"""Intrabank Account""",,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.004s,PASSED
+externalId = 10000 + Random().nextInt(99999 - 10000),,Generate External Id,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.013s,PASSED
+"comment(""Random 5-digit integer: "" + externalId)",,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.006s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate TimeStamp,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.003s,PASSED
+"trxDateTime = format(""yyyy-MM-dd'T'HH:mm:ssZ"").replace(""0700"", ""07:00"")",,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.004s,PASSED
+"comment(""ini transactionDate "" + trxDateTime)",,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.004s,PASSED
+"PaymentIntrabank2 = findTestObject(""Object Repository/FT to VA/Payment Intrabank"", [""externalId"":externalId, ""signature"":"""", ""timeStamp"":timeStamp, ""token"":Token, ""partnerServiceId"":partnerServiceId, ""customerNo"":customerNo, ... ])",,Proses Encrypt Request Body,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.416s,PASSED
+request_body2 = PaymentIntrabank2.getHttpBody(),,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.003s,PASSED
+"endpoint_path = ""/payment/snap/prod/v1.1/transfer-va/payment-intrabank""",,,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.002s,PASSED
+"signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp)",,Generate Signature,,2023-12-11 09:18:52,2023-12-11 09:18:52,0.200s,PASSED
+"PaymentIntrabank = findTestObject(""Object Repository/FT to VA/Payment Intrabank"", [""externalId"":externalId, ""signature"":signature, ""timeStamp"":timeStamp, ""token"":Token, ""partnerServiceId"":partnerServiceId, ... ])",,,,2023-12-11 09:18:52,2023-12-11 09:18:53,0.396s,PASSED
+request_body = PaymentIntrabank.getHttpBody(),,Get Body request,,2023-12-11 09:18:53,2023-12-11 09:18:53,0.001s,PASSED
+"comment(""request body "" + request_body)",,,,2023-12-11 09:18:53,2023-12-11 09:18:53,0.007s,PASSED
+response = sendRequest(PaymentIntrabank),,Get Respon Body,,2023-12-11 09:18:53,2023-12-11 09:19:10,17.447s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-12-11 09:19:10,2023-12-11 09:19:10,0.011s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-12-11 09:19:10,2023-12-11 09:19:10,0.005s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-12-11 09:19:10,2023-12-11 09:19:10,0.002s,PASSED

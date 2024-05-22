@@ -1,0 +1,54 @@
+{
+  "keywordFileContentHash": "6EFAD18D22B0CBF2EF44794215CDF804",
+  "keywordClasses": [
+    {
+      "name": "utils.utilsBri",
+      "keywordMethods": [
+        {
+          "name": "base64UrlEncode",
+          "parameters": [
+            {
+              "name": "input",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "hexToBase64",
+          "parameters": [
+            {
+              "name": "hexstring",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ],
+          "javadoc": ""
+        },
+        {
+          "name": "convertToKeyword",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}

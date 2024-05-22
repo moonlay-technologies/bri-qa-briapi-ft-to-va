@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>FTtoVAInquiryIntrabank</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
+   <testSuiteGuid>e7f315a5-19fc-47c1-9d86-bd6c8a847889</testSuiteGuid>
+   <testCaseLink>
+      <guid>8251f54d-89b1-411f-a59d-118a903000fc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Get Token/Get Token</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>35da0fbc-dbbe-4221-94ef-65f6331af6e4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/FT to VA/InquiryIntrabank</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>c632d2eb-ecbb-42b9-a30a-0734a6d74361</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/BRI API/Data Files FTtoVAInquiryIntrabank</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>c632d2eb-ecbb-42b9-a30a-0734a6d74361</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>partnerServiceId</value>
+         <variableId>0c6f6ebd-9a2c-40ec-a56f-e3a34bd2b3db</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c632d2eb-ecbb-42b9-a30a-0734a6d74361</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>customerNo</value>
+         <variableId>ae5597eb-a558-45b3-91fb-14bba4bf334d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c632d2eb-ecbb-42b9-a30a-0734a6d74361</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>virtualAccountNo</value>
+         <variableId>61a3755f-a6ab-4e7e-ad79-72e9e7cde3c5</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

@@ -1,0 +1,35 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+FTtoVAInquiryIntrabank,,,,2023-11-28 09:19:51,2023-11-28 09:20:01,10.053s,PASSED
+,,,,,,,
+Test Cases/Get Token/Get Token,,,,2023-11-28 09:19:51,2023-11-28 09:19:59,7.300s,PASSED
+"""Get Token Process""",,,,2023-11-28 09:19:52,2023-11-28 09:19:52,0.003s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate Time Stamp,,2023-11-28 09:19:52,2023-11-28 09:19:52,0.018s,PASSED
+"comment(""ini tanggal"" + timeStamp)",,,,2023-11-28 09:19:52,2023-11-28 09:19:53,0.189s,PASSED
+timeStamp = timeStamp,,,,2023-11-28 09:19:53,2023-11-28 09:19:54,1.170s,PASSED
+signatureHex = utils.Generate.signSHA256RSA(),,Generate SignatureHex,,2023-11-28 09:19:54,2023-11-28 09:19:56,1.881s,PASSED
+"comment(""signatureHEX"" + signatureHex)",,,,2023-11-28 09:19:56,2023-11-28 09:19:56,0.023s,PASSED
+"getToken = findTestObject(""Object Repository/Get Token/getToken"", [""signatureHex"":signatureHex, ""clientID"":clientId, ""timeStamp"":timeStamp])",,,,2023-11-28 09:19:56,2023-11-28 09:19:56,0.298s,PASSED
+request_body = getToken.getHttpBody(),,Get Body request,,2023-11-28 09:19:56,2023-11-28 09:19:56,0.051s,PASSED
+"comment(""request body "" + request_body)",,,,2023-11-28 09:19:56,2023-11-28 09:19:56,0.020s,PASSED
+response = sendRequest(getToken),,Get Respon Body,,2023-11-28 09:19:56,2023-11-28 09:19:59,2.530s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-11-28 09:19:59,2023-11-28 09:19:59,0.033s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-11-28 09:19:59,2023-11-28 09:19:59,0.018s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-11-28 09:19:59,2023-11-28 09:19:59,0.020s,PASSED
+Token = accessToken,,,,2023-11-28 09:19:59,2023-11-28 09:19:59,0.014s,PASSED
+,,,,,,,
+Test Cases/FT to VA/InquiryIntrabank,,,,2023-11-28 09:19:59,2023-11-28 09:20:01,1.921s,PASSED
+"""Intrabank Account""",,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.001s,PASSED
+externalId = 10000 + Random().nextInt(99999 - 10000),,Generate External Id,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.010s,PASSED
+"comment(""Random 5-digit integer: "" + externalId)",,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.012s,PASSED
+"timeStamp = SSSZ"").replace(""0700"", ""07:00"")",,Generate TimeStamp,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.002s,PASSED
+"InquiryIntrabank2 = findTestObject(""Object Repository/FT to VA/Inquiry Intrabank"", [""externalId"":externalId, ""signature"":"""", ""timeStamp"":timeStamp, ""token"":Token, ""partnerServiceId"":partnerServiceId, ""customerNo"":customerNo, ... ])",,Proses Encrypt Request Body,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.172s,PASSED
+request_body2 = InquiryIntrabank2.getHttpBody(),,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.002s,PASSED
+"endpoint_path = ""/inquiry/snap/prod/v1.1/transfer-va/inquiry-intrabank""",,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.002s,PASSED
+"signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp)",,Generate Signature,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.122s,PASSED
+"InquiryIntrabank = findTestObject(""Object Repository/FT to VA/Inquiry Intrabank"", [""externalId"":externalId, ""signature"":signature, ""timeStamp"":timeStamp, ""token"":Token, ""partnerServiceId"":partnerServiceId, ... ])",,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.181s,PASSED
+request_body = InquiryIntrabank.getHttpBody(),,Get Body request,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.003s,PASSED
+"comment(""request body "" + request_body)",,,,2023-11-28 09:20:00,2023-11-28 09:20:00,0.012s,PASSED
+response = sendRequest(InquiryIntrabank),,Get Respon Body,,2023-11-28 09:20:00,2023-11-28 09:20:01,0.631s,PASSED
+"comment(""response body "" + response.getResponseText())",,,,2023-11-28 09:20:01,2023-11-28 09:20:01,0.004s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2023-11-28 09:20:01,2023-11-28 09:20:01,0.001s,PASSED
+parsedJson = slurper.parseText(response.getResponseText()),,,,2023-11-28 09:20:01,2023-11-28 09:20:01,0.001s,PASSED

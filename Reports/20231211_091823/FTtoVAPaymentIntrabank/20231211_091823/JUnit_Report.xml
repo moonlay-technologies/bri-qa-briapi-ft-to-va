@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="FTtoVAPaymentIntrabank" time="29.465" tests="2" failures="0" errors="0">
+   <testsuite name="FTtoVAPaymentIntrabank" tests="2" failures="0" errors="0" time="29.465" skipped="0" timestamp="2023-12-11 09:18:41" hostname="VinnyKristinaSihombi - Vinny-Moonlay-LP06955" id="Test Suites/FTtoVAPaymentIntrabank">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\1. QA\\BRI\\API\\Briapi\\qa-briapi-ft-to-va\\Reports\\20231211_091823\\FTtoVAPaymentIntrabank\\20231211_091823"/>
+         <property name="logFiles" value="D:\\1. QA\\BRI\\API\\Briapi\\qa-briapi-ft-to-va\\Reports\\20231211_091823\\FTtoVAPaymentIntrabank\\20231211_091823\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="VinnyKristinaSihombi - Vinny-Moonlay-LP06955"/>
+         <property name="hostAddress" value="192.168.28.65"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.6.0.208"/>
+      </properties>
+      <testcase name="Test Cases/Get Token/Get Token" time="8.928" classname="Test Cases/Get Token/Get Token" status="PASSED">
+         <system-out><![CDATA[2023-12-11 09:18:42 - [TEST_CASE][PASSED] - Test Cases/Get Token/Get Token: Test Cases/Get Token/Get Token
+
+2023-12-11 09:18:42 - [TEST_STEP][PASSED] - "Get Token Process": null
+
+2023-12-11 09:18:42 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-12-11 09:18:42 - [TEST_STEP][PASSED] - comment("ini tanggal" + timeStamp): ini tanggal2023-12-11T09:18:42.797+07:00
+
+2023-12-11 09:18:42 - [MESSAGE][INFO] - ini tanggal2023-12-11T09:18:42.797+07:00
+
+2023-12-11 09:18:42 - [TEST_STEP][PASSED] - timeStamp = timeStamp: null
+
+2023-12-11 09:18:43 - [TEST_STEP][PASSED] - signatureHex = utils.Generate.signSHA256RSA(): utils.Generate.signSHA256RSA is PASSED
+
+2023-12-11 09:18:46 - [MESSAGE][PASSED] - utils.Generate.signSHA256RSA is PASSED
+
+2023-12-11 09:18:46 - [TEST_STEP][PASSED] - comment("signatureHEX" + signatureHex): signatureHEXQnZtuMQvajLXO/hSBxT7Qofq1DnXPmHehoNdewjCL7rj4ong8JjYCh8U6hXS5M0F76OQUMNkzmjBu9FthDTtLrBVdAyn+UsZD8TVEYjEnzHVycAwYOjO0PIuSPI/fbsUsobK8ubuUOrOQ+li/Nw6eodFCKhHQrlhenr9nb+f3y01Q5I7t22sHGLOFK6BrKlvfyLZM5bZuhH9km1lJ8h4Tdy6i96m7j+SUnh63m0/z9wBfZv/eW4iMkQmT+hcGdqwMufINxwci6z3bCEapB94zUJmIX912m76uR5/0r9EeIqBFfmNjTm91Q+g5+GGBXkXSKAx0IOFU1XdHSHA9Q900g==
+
+2023-12-11 09:18:46 - [MESSAGE][INFO] - signatureHEXQnZtuMQvajLXO/hSBxT7Qofq1DnXPmHehoNdewjCL7rj4ong8JjYCh8U6hXS5M0F76OQUMNkzmjBu9FthDTtLrBVdAyn+UsZD8TVEYjEnzHVycAwYOjO0PIuSPI/fbsUsobK8ubuUOrOQ+li/Nw6eodFCKhHQrlhenr9nb+f3y01Q5I7t22sHGLOFK6BrKlvfyLZM5bZuhH9km1lJ8h4Tdy6i96m7j+SUnh63m0/z9wBfZv/eW4iMkQmT+hcGdqwMufINxwci6z3bCEapB94zUJmIX912m76uR5/0r9EeIqBFfmNjTm91Q+g5+GGBXkXSKAx0IOFU1XdHSHA9Q900g==
+
+2023-12-11 09:18:46 - [TEST_STEP][PASSED] - getToken = findTestObject("Object Repository/Get Token/getToken", ["signatureHex":signatureHex, "clientID":clientId, "timeStamp":timeStamp]): null
+
+2023-12-11 09:18:47 - [TEST_STEP][PASSED] - request_body = getToken.getHttpBody(): null
+
+2023-12-11 09:18:47 - [TEST_STEP][PASSED] - comment("request body " + request_body): request body {
+    "grantType": "client_credentials"
+}
+
+2023-12-11 09:18:47 - [MESSAGE][INFO] - request body {
+    "grantType": "client_credentials"
+}
+
+2023-12-11 09:18:47 - [TEST_STEP][PASSED] - response = sendRequest(getToken): Send request successfully
+
+2023-12-11 09:18:50 - [MESSAGE][INFO] - HAR: D:\1. QA\BRI\API\Briapi\qa-briapi-ft-to-va\Reports\20231211_091823\FTtoVAPaymentIntrabank\20231211_091823\requests\main\0.har
+
+2023-12-11 09:18:50 - [MESSAGE][PASSED] - Send request successfully
+
+2023-12-11 09:18:50 - [TEST_STEP][PASSED] - comment("response body " + response.getResponseText()): response body 
+        {
+        "accessToken": "aJcoqJFNZHkb7eWTFqIFIGRD7rSJ",
+        "tokenType": "BearerToken",
+        "expiresIn": "899"
+        }
+
+    
+
+2023-12-11 09:18:50 - [MESSAGE][INFO] - response body 
+        {
+        "accessToken": "aJcoqJFNZHkb7eWTFqIFIGRD7rSJ",
+        "tokenType": "BearerToken",
+        "expiresIn": "899"
+        }
+
+    
+
+2023-12-11 09:18:50 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2023-12-11 09:18:50 - [TEST_STEP][PASSED] - parsedJson = slurper.parseText(response.getResponseText()): null
+
+2023-12-11 09:18:50 - [TEST_STEP][PASSED] - Token = accessToken: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/FT to VA/PaymentIntrabank" time="19.552" classname="Test Cases/FT to VA/PaymentIntrabank" status="PASSED">
+         <system-out><![CDATA[2023-12-11 09:18:51 - [TEST_CASE][PASSED] - Test Cases/FT to VA/PaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - "Intrabank Account": null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - externalId = 10000 + Random().nextInt(99999 - 10000): null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - comment("Random 5-digit integer: " + externalId): Random 5-digit integer: 50809
+
+2023-12-11 09:18:52 - [MESSAGE][INFO] - Random 5-digit integer: 50809
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - timeStamp = SSSZ").replace("0700", "07:00"): null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - trxDateTime = format("yyyy-MM-dd'T'HH:mm:ssZ").replace("0700", "07:00"): null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - comment("ini transactionDate " + trxDateTime): ini transactionDate 2023-12-11T09:18:52+07:00
+
+2023-12-11 09:18:52 - [MESSAGE][INFO] - ini transactionDate 2023-12-11T09:18:52+07:00
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - PaymentIntrabank2 = findTestObject("Object Repository/FT to VA/Payment Intrabank", ["externalId":externalId, "signature":"", "timeStamp":timeStamp, "token":Token, "partnerServiceId":partnerServiceId, "customerNo":customerNo, ... ]): null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - request_body2 = PaymentIntrabank2.getHttpBody(): null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - endpoint_path = "/payment/snap/prod/v1.1/transfer-va/payment-intrabank": null
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - signature = utils.Generate.signature(request_body2, endpoint_path, timeStamp): utils.Generate.signature is PASSED
+
+2023-12-11 09:18:52 - [MESSAGE][PASSED] - utils.Generate.signature is PASSED
+
+2023-12-11 09:18:52 - [TEST_STEP][PASSED] - PaymentIntrabank = findTestObject("Object Repository/FT to VA/Payment Intrabank", ["externalId":externalId, "signature":signature, "timeStamp":timeStamp, "token":Token, "partnerServiceId":partnerServiceId, ... ]): null
+
+2023-12-11 09:18:53 - [TEST_STEP][PASSED] - request_body = PaymentIntrabank.getHttpBody(): null
+
+2023-12-11 09:18:53 - [TEST_STEP][PASSED] - comment("request body " + request_body): request body {
+    "partnerServiceId": "   11208",
+    "customerNo": "5262315094",
+    "virtualAccountNo": "   112085262315094",
+    "virtualAccountName": "uXXXXXXXa",
+    "sourceAccountNo": "020601009446306",
+    "partnerReferenceNo": "2309111101",
+    "trxDateTime": "2023-12-11T09:18:52+07:00",
+    "paidAmount": {
+        "value": "1000000.00",
+        "currency": "IDR"
+    }
+}
+
+2023-12-11 09:18:53 - [MESSAGE][INFO] - request body {
+    "partnerServiceId": "   11208",
+    "customerNo": "5262315094",
+    "virtualAccountNo": "   112085262315094",
+    "virtualAccountName": "uXXXXXXXa",
+    "sourceAccountNo": "020601009446306",
+    "partnerReferenceNo": "2309111101",
+    "trxDateTime": "2023-12-11T09:18:52+07:00",
+    "paidAmount": {
+        "value": "1000000.00",
+        "currency": "IDR"
+    }
+}
+
+2023-12-11 09:18:53 - [TEST_STEP][PASSED] - response = sendRequest(PaymentIntrabank): Send request successfully
+
+2023-12-11 09:19:10 - [MESSAGE][INFO] - HAR: D:\1. QA\BRI\API\Briapi\qa-briapi-ft-to-va\Reports\20231211_091823\FTtoVAPaymentIntrabank\20231211_091823\requests\main\1.har
+
+2023-12-11 09:19:10 - [MESSAGE][PASSED] - Send request successfully
+
+2023-12-11 09:19:10 - [TEST_STEP][PASSED] - comment("response body " + response.getResponseText()): response body {"responseCode":"4043311","responseMessage":"Invalid Card/Account/Customer[info]/Virtual Account"}
+
+2023-12-11 09:19:10 - [MESSAGE][INFO] - response body {"responseCode":"4043311","responseMessage":"Invalid Card/Account/Customer[info]/Virtual Account"}
+
+2023-12-11 09:19:10 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2023-12-11 09:19:10 - [TEST_STEP][PASSED] - parsedJson = slurper.parseText(response.getResponseText()): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-12-11 09:18:41 - [TEST_SUITE][PASSED] - FTtoVAPaymentIntrabank: Test Cases/FT to VA/PaymentIntrabank]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

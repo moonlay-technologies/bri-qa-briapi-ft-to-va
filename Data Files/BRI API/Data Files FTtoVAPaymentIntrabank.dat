@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>Data Files FTtoVAPaymentIntrabank</name>
+   <tag></tag>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>34679c51-b009-49a6-9b64-64fcb77d6f55</dataFileGUID>
+   <dataSourceUrl>D:\1. QA\BRI\API\Briapi\qa-briapi-ft-to-va\Data Files\BRI API\DataFilesBRI.xlsx</dataSourceUrl>
+   <driver>ExcelFile</driver>
+   <isInternalPath>false</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName>FTtoVAPaymentIntrabank</sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>
